@@ -20,6 +20,7 @@ const StyledMain = styled.main`
     font-size: 2.4413rem;
     text-transform: uppercase;
     margin-bottom: 0.2em;
+    text-align: center;
 
     span {
       color: #ff922b;
@@ -33,6 +34,8 @@ const StyledMain = styled.main`
     color: #fff;
     letter-spacing: -1px;
     margin-bottom: 1em;
+    white-space: nowrap;
+    text-align: center;
   }
 
   .moving-arrow {

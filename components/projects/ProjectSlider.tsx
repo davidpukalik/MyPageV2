@@ -32,8 +32,8 @@ const ProjectSlider: React.FC<Props> = ({ data }) => {
     <StyledProjectSlider>
       <Slider {...sliderSettings} className="slider">
         {data.map((project) => (
-          <Card sx={{ maxWidth: 345, minHeight: 320, outline: "#FF922B" }} key={project.id}>
-            <CardMedia component="img" height="140" image={project.img} alt={project.title} />
+          <Card sx={{ maxWidth: 345, minHeight: 310, outline: "#FF922B" }} key={project.id}>
+            <CardMedia component="img" height="150" image={project.img} alt={project.title} />
             <CardContent>
               <h3>{project.title}</h3>
               <p>{project.desc}</p>
