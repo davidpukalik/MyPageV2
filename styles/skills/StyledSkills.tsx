@@ -11,6 +11,7 @@ const StyledSkills = styled.div`
     font-weight: normal;
     font-size: 0.8rem;
     text-align: right;
+    text-transform: uppercase;
     color: ${(props) => props.theme.colors.orange};
   }
 

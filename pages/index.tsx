@@ -5,6 +5,7 @@ import Navbar from "../components/navbar/Navbar";
 import Main from "../components/main/Main";
 import About from "../components/about/About";
 import Skills from "../components/skills/Skills";
+import Project from "../components/projects/Project";
 
 const Home: NextPage = () => {
   const [isNavBackground, setIsNavBackground] = useState<boolean>(true);
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <Main />
       <About />
       <Skills />
+      <Project />
     </div>
   );
 };

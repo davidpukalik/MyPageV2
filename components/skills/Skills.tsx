@@ -20,10 +20,10 @@ import SkillItem from "./SkillItem";
 
 const Skills: React.FC = () => {
   return (
-    <StyledSkills>
+    <StyledSkills id="skills">
       <Container>
-        <h4>About</h4>
-        <h2>About Me</h2>
+        <h4>Skills</h4>
+        <h2>What Am I Good At</h2>
         <h3>
           <span>Primary</span> Skills
         </h3>

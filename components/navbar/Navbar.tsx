@@ -6,6 +6,7 @@ import Logo from "../shared/Logo";
 import CzechFlag from "../../public/images/flags/czech-flag.svg";
 import UKFlag from "../../public/images/flags/united-kingdom-flag.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   isNavBackground: boolean;
@@ -19,21 +20,31 @@ const Navbar: React.FC<Props> = (props) => {
       <Container flex justifyContent="space-between">
         <Logo />
         <ul>
-          <a href="">
-            <li>Home</li>
-          </a>
-          <a href="">
-            <li>About</li>
-          </a>
-          <a href="">
-            <li>Skills</li>
-          </a>
-          <a href="">
-            <li>Projects</li>
-          </a>
-          <a href="">
-            <li className="outlined">Contact</li>
-          </a>
+          <Link href="/">
+            <a>
+              <li>Home</li>
+            </a>
+          </Link>
+          <Link href="#about">
+            <a>
+              <li>About</li>
+            </a>
+          </Link>
+          <Link href="#skills">
+            <a>
+              <li>Skills</li>
+            </a>
+          </Link>
+          <Link href="#projects">
+            <a>
+              <li>Projects</li>
+            </a>
+          </Link>
+          <Link href="#contact">
+            <a>
+              <li className="outlined">Contact</li>
+            </a>
+          </Link>
         </ul>
         <LanguageSelect>
           <Image src={CzechFlag} alt="Czech" width={30} height={30} priority />

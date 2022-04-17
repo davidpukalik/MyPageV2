@@ -4,6 +4,10 @@ const StyledNavbar = styled.nav`
   height: 80px;
   width: 100%;
   background: ${(props) => props.theme.colors.lightGray};
+  background: linear-gradient(
+    ${(props) => props.theme.colors.darkGray} 100%,
+    ${(props) => props.theme.colors.lightGray} 50%
+  );
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
   position: fixed;
   z-index: 99;
