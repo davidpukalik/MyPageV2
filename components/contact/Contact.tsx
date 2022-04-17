@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 
 const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id="contact">
       <Container>
         <h4>Contact</h4>
         <h2>Get In Touch</h2>
@@ -58,7 +58,7 @@ const Contact = () => {
             />
           </Flex>
           <Flex className="form-control">
-            <TextField id="outlined-multiline-static" label="Message" multiline rows={6} sx={{ width: "100%" }} />
+            <TextField id="outlined-multiline-static" label="Message" multiline rows={8} sx={{ width: "100%" }} />
           </Flex>
           <Flex justifyContent="flex-end">
             <Button color="primary" variant="outlined">

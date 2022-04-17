@@ -44,6 +44,10 @@ const StyledProjectSlider = styled.div`
     .slick-next::before {
       color: ${(props) => props.theme.colors.orange};
     }
+
+    .slick-arrow::before {
+      font-size: 1.8rem;
+    }
   }
 `;
 

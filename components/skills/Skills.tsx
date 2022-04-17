@@ -23,7 +23,7 @@ const Skills: React.FC = () => {
     <StyledSkills id="skills">
       <Container>
         <h4>Skills</h4>
-        <h2>What Am I Good At</h2>
+        <h2>What I&apos;m Good At</h2>
         <h3>
           <span>Primary</span> Skills
         </h3>
