@@ -6,6 +6,7 @@ import Main from "../components/main/Main";
 import About from "../components/about/About";
 import Skills from "../components/skills/Skills";
 import Project from "../components/projects/Project";
+import Contact from "../components/contact/Contact";
 
 const Home: NextPage = () => {
   const [isNavBackground, setIsNavBackground] = useState<boolean>(true);
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
       <About />
       <Skills />
       <Project />
+      <Contact />
     </div>
   );
 };
