@@ -21,6 +21,7 @@ const Contact = () => {
               id="input-with-icon-textfield"
               label="Name"
               color="primary"
+              sx={{ width: "23%" }}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -34,6 +35,7 @@ const Contact = () => {
               id="input-with-icon-textfield"
               label="E-mail"
               color="primary"
+              sx={{ width: "23%" }}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -47,6 +49,7 @@ const Contact = () => {
               id="input-with-icon-textfield"
               label="Subject"
               color="primary"
+              sx={{ width: "23%" }}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
