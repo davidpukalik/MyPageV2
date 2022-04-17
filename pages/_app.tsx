@@ -1,13 +1,17 @@
 import GlobalStyles from "../styles/GlobalStyles";
 import Theme from "../styles/Theme";
 import { ThemeProvider } from "styled-components";
+import { ThemeProvider as MUIThemeProvider } from "@mui/material";
 import type { AppProps } from "next/app";
+import MUITheme from "../styles/MUITheme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={Theme}>
-      <GlobalStyles />
-      <Component {...pageProps} />
+      <MUIThemeProvider theme={MUITheme}>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </MUIThemeProvider>
     </ThemeProvider>
   );
 }

@@ -20,10 +20,11 @@ const Contact = () => {
             <TextField
               id="input-with-icon-textfield"
               label="Name"
+              color="primary"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
-                    <AccountCircle />
+                    <AccountCircle color="primary" />
                   </InputAdornment>
                 ),
               }}
@@ -32,10 +33,11 @@ const Contact = () => {
             <TextField
               id="input-with-icon-textfield"
               label="E-mail"
+              color="primary"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
-                    <AlternateEmailIcon />
+                    <AlternateEmailIcon color="primary" />
                   </InputAdornment>
                 ),
               }}
@@ -44,10 +46,11 @@ const Contact = () => {
             <TextField
               id="input-with-icon-textfield"
               label="Subject"
+              color="primary"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
-                    <EmailIcon />
+                    <EmailIcon color="primary" />
                   </InputAdornment>
                 ),
               }}
@@ -58,7 +61,9 @@ const Contact = () => {
             <TextField id="outlined-multiline-static" label="Message" multiline rows={6} sx={{ width: "100%" }} />
           </Flex>
           <Flex justifyContent="flex-end">
-            <Button variant="outlined">Send Message</Button>
+            <Button color="primary" variant="outlined">
+              Send Message
+            </Button>
           </Flex>
         </form>
       </Container>

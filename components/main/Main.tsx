@@ -27,7 +27,7 @@ const Main: React.FC = () => {
               sx={{
                 transform: "rotate(90deg)",
                 cursor: "pointer",
-                "&:hover": { color: "#FF922B" },
+                "&:hover": { color: "primary.main" },
               }}
               fontSize="large"
             />

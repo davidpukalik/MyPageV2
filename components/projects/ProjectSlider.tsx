@@ -32,7 +32,7 @@ const ProjectSlider: React.FC<Props> = ({ data }) => {
     <StyledProjectSlider>
       <Slider {...sliderSettings} className="slider">
         {data.map((project) => (
-          <Card sx={{ maxWidth: 345, minHeight: 310, outline: "#FF922B" }} key={project.id}>
+          <Card sx={{ maxWidth: 345, minHeight: 310, outline: "primary.main" }} key={project.id}>
             <CardMedia component="img" height="150" image={project.img} alt={project.title} />
             <CardContent>
               <h3>{project.title}</h3>
@@ -41,22 +41,14 @@ const ProjectSlider: React.FC<Props> = ({ data }) => {
             <CardActions sx={{ position: "relative" }}>
               <Link href={project.link}>
                 <a>
-                  <Button
-                    variant="outlined"
-                    size="small"
-                    sx={{
-                      border: "1px solid #FF922B",
-                      color: "#d87519",
-                      "&:hover": { border: "1px solid #d87519", background: "#ff922b1a" },
-                    }}
-                  >
+                  <Button variant="outlined" size="small" color="primary">
                     Github
                   </Button>
                 </a>
               </Link>
               <Link href={project.link}>
                 <a>
-                  <Button size="small" sx={{ color: "#d87519", "&:hover": { background: "#ff922b45" } }}>
+                  <Button size="small" color="primary">
                     Visit Page
                   </Button>
                 </a>
