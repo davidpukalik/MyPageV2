@@ -14,6 +14,7 @@ interface Props {
     img: string;
     title: string;
     desc: string;
+    date: string;
     link: string;
   }[];
 }
@@ -34,12 +35,10 @@ const ProjectSlider: React.FC<Props> = ({ data }) => {
           <Card sx={{ maxWidth: 345, minHeight: 320, outline: "#FF922B" }} key={project.id}>
             <CardMedia component="img" height="140" image={project.img} alt={project.title} />
             <CardContent>
-              <h3>
-                {project.title} <small>December 2021</small>
-              </h3>
+              <h3>{project.title}</h3>
               <p>{project.desc}</p>
             </CardContent>
-            <CardActions>
+            <CardActions sx={{ position: "relative" }}>
               <Link href={project.link}>
                 <a>
                   <Button
@@ -62,6 +61,7 @@ const ProjectSlider: React.FC<Props> = ({ data }) => {
                   </Button>
                 </a>
               </Link>
+              <small>{project.date}</small>
             </CardActions>
           </Card>
         ))}

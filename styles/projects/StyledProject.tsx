@@ -16,6 +16,7 @@ const StyledProject = styled.div`
 
   h2 {
     text-align: center;
+    color: ${(props) => props.theme.colors.darkGray};
     font-weight: bold;
     font-size: 2.0156rem;
     margin-bottom: 1em;

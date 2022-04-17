@@ -7,15 +7,17 @@ const StyledProjectSlider = styled.div`
   h3 {
     font-weight: bold;
     font-size: 1.25rem;
-    margin-bottom: 0.3em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
 
-    small {
-      font-size: 0.75rem;
-      color: ${(props) => props.theme.colors.lightGray};
-    }
+  small {
+    font-size: 0.75rem;
+    color: ${(props) => props.theme.colors.lightGray};
+    position: absolute;
+    bottom: 1.3em;
+    right: 1em;
+    text-align: right;
   }
 
   p {
