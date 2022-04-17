@@ -13,7 +13,7 @@ const SocialMedia: React.FC<Props> = (props) => {
     <StyledSocialMedia>
       <FacebookIcon sx={{ "&:hover": { color: "#3f62a9" }, cursor: "pointer" }} fontSize={props.size || "medium"} />
       <LinkedInIcon sx={{ "&:hover": { color: "#0E76A8" }, cursor: "pointer" }} fontSize={props.size || "medium"} />
-      <GitHubIcon sx={{ "&:hover": { color: "#800080" }, cursor: "pointer" }} fontSize={props.size || "medium"} />
+      <GitHubIcon sx={{ "&:hover": { color: "#ae3ec9" }, cursor: "pointer" }} fontSize={props.size || "medium"} />
     </StyledSocialMedia>
   );
 };

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import StyledNavbar from "../styles/navbar/StyledNavbar";
-import Container from "../styles/shared/Container";
-import LanguageSelect from "../styles/navbar/LanguageSelect";
-import Logo from "./shared/Logo";
-import CzechFlag from "../assets/images/flags/czech-flag.svg";
-import UKFlag from "../assets/images/flags/united-kingdom-flag.svg";
+import StyledNavbar from "../../styles/navbar/StyledNavbar";
+import Container from "../../styles/shared/Container";
+import LanguageSelect from "../../styles/navbar/LanguageSelect";
+import Logo from "../shared/Logo";
+import CzechFlag from "../../public/images/flags/czech-flag.svg";
+import UKFlag from "../../public/images/flags/united-kingdom-flag.svg";
 import Image from "next/image";
 
 interface Props {

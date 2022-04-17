@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {

@@ -34,6 +34,23 @@ const StyledMain = styled.main`
     letter-spacing: -1px;
     margin-bottom: 1em;
   }
+
+  .moving-arrow {
+    animation: arrow-animation 2s infinite;
+    margin-bottom: 2em;
+  }
+
+  @keyframes arrow-animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    20% {
+      transform: translate(0, 5px);
+    }
+    40% {
+      transform: translate(0, 0);
+    }
+  }
 `;
 
 export default StyledMain;

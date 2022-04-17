@@ -6,6 +6,7 @@ const StyledNavbar = styled.nav`
   background: ${(props) => props.theme.colors.lightGray};
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
   position: fixed;
+  z-index: 99;
 
   ul {
     display: flex;

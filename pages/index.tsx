@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Main from "../components/Main";
+import Navbar from "../components/navbar/Navbar";
+import Main from "../components/main/Main";
+import About from "../components/about/About";
+import Skills from "../components/skills/Skills";
 
 const Home: NextPage = () => {
   const [isNavBackground, setIsNavBackground] = useState<boolean>(true);
@@ -15,6 +17,8 @@ const Home: NextPage = () => {
       </Head>
       <Navbar isNavBackground={isNavBackground} />
       <Main />
+      <About />
+      <Skills />
     </div>
   );
 };
