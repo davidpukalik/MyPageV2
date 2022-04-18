@@ -18,14 +18,18 @@ import CSharpIMG from "../../public/images/skills/csharp_logo.svg";
 import JavaIMG from "../../public/images/skills/java_logo.svg";
 import SkillItem from "./SkillItem";
 
-const Skills: React.FC = () => {
+interface Props {
+  locale: any;
+}
+
+const Skills: React.FC<Props> = ({ locale: t }) => {
   return (
     <StyledSkills id="skills">
       <Container>
-        <h4>Skills</h4>
-        <h2>What I&apos;m Good At</h2>
+        <h4>{t.Skills.Subtitle}</h4>
+        <h2>{t.Skills.Title}</h2>
         <h3>
-          <span>Primary</span> Skills
+          <span>{t.Skills.Primary}</span> {t.Skills.Skills}
         </h3>
         <div className="skills">
           <SkillItem title="React" img={ReactIMG} />
@@ -43,7 +47,7 @@ const Skills: React.FC = () => {
           <SkillItem title="SASS" img={SASSIMG} />
         </div>
         <h3>
-          <span>Other</span> Skills (just basics)
+          <span>{t.Skills.Other}</span> {t.Skills.Skills} {t.Skills.Basics}
         </h3>
         <div className="skills">
           <SkillItem title="CSharp" img={CSharpIMG} />

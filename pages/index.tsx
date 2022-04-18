@@ -8,9 +8,16 @@ import Skills from "../components/skills/Skills";
 import Project from "../components/projects/Project";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
+import { useRouter } from "next/router";
+import TranslationCS from "../public/locales/cs/translationCS.json";
+import TranslationEN from "../public/locales/en/translationEN.json";
 
 const Home: NextPage = () => {
   const [isNavBackgroundVisible, setIsNavBackgroundVisible] = useState<boolean>(false);
+  const router = useRouter();
+  let { locale } = router;
+  locale = String(locale);
+  const t = locale === "cs" ? TranslationCS : TranslationEN;
 
   useEffect(() => {
     const onScroll = () => setIsNavBackgroundVisible(window.scrollY ? true : false);
@@ -26,12 +33,12 @@ const Home: NextPage = () => {
         <title>David Pukalík | Portfolio</title>
         <meta name="description" content="Page about David Pukalík. :)" />
       </Head>
-      <Navbar isNavBackgroundVisible={isNavBackgroundVisible} />
+      <Navbar locale={t} isNavBackgroundVisible={isNavBackgroundVisible} />
       <Main />
-      <About />
-      <Skills />
-      <Project />
-      <Contact />
+      <About locale={t} />
+      <Skills locale={t} />
+      <Project locale={t} />
+      <Contact locale={t} />
       <Footer />
     </div>
   );

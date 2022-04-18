@@ -1,0 +1,37 @@
+{
+  "Navbar": {
+    "Home": "Home",
+    "About": "About",
+    "Skills": "Skills",
+    "Projects": "Projects",
+    "Contact": "Contact"
+  },
+  "About": {
+    "Subtitle": "About",
+    "Title": "About Me",
+    "DescHigh": "Hello, I'm",
+    "Desc": "I'm a junior React Developer with fluent English. Currently I'm studying Object Oriented Programming and Web Application Programming at Technical University of Ostrava (CZ). I'm available to start to work in May 2022."
+  },
+  "Skills": {
+    "Subtitle": "Skills",
+    "Title": "What I'm Good At",
+    "Primary": "Primary",
+    "Other": "Other",
+    "Skills": "Skills",
+    "Basics": "(just basics)"
+  },
+  "Projects": {
+    "Subtitle": "Projects",
+    "Title": "My Skills Showcase",
+    "Visit": "Visit Page"
+  },
+  "Contact": {
+    "Subtitle": "Contact",
+    "Title": "Get In Touch",
+    "Name": "Name",
+    "Email": "E-mail",
+    "Subject": "Subject",
+    "Message": "Message",
+    "Send": "Send message"
+  }
+}

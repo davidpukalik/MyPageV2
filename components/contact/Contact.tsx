@@ -9,17 +9,21 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import EmailIcon from "@mui/icons-material/Email";
 import Button from "@mui/material/Button";
 
-const Contact = () => {
+interface Props {
+  locale: any;
+}
+
+const Contact: React.FC<Props> = ({ locale: t }) => {
   return (
     <StyledContact id="contact">
       <Container>
-        <h4>Contact</h4>
-        <h2>Get In Touch</h2>
+        <h4>{t.Contact.Subtitle}</h4>
+        <h2>{t.Contact.Title}</h2>
         <form>
           <Flex justifyContent="space-between" alignItems="center" className="form-control">
             <TextField
               id="input-with-icon-textfield"
-              label="Name"
+              label={t.Contact.Name}
               color="primary"
               sx={{ width: "23%" }}
               InputProps={{
@@ -33,7 +37,7 @@ const Contact = () => {
             />
             <TextField
               id="input-with-icon-textfield"
-              label="E-mail"
+              label={t.Contact.Email}
               color="primary"
               sx={{ width: "23%" }}
               InputProps={{
@@ -47,7 +51,7 @@ const Contact = () => {
             />
             <TextField
               id="input-with-icon-textfield"
-              label="Subject"
+              label={t.Contact.Subject}
               color="primary"
               sx={{ width: "23%" }}
               InputProps={{
@@ -61,11 +65,17 @@ const Contact = () => {
             />
           </Flex>
           <Flex className="form-control">
-            <TextField id="outlined-multiline-static" label="Message" multiline rows={8} sx={{ width: "100%" }} />
+            <TextField
+              id="outlined-multiline-static"
+              label={t.Contact.Message}
+              multiline
+              rows={8}
+              sx={{ width: "100%" }}
+            />
           </Flex>
           <Flex justifyContent="flex-end">
             <Button color="primary" variant="outlined">
-              Send Message
+              {t.Contact.Send}
             </Button>
           </Flex>
         </form>

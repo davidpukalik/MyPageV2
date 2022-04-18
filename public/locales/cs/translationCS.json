@@ -1,0 +1,37 @@
+{
+  "Navbar": {
+    "Home": "Domů",
+    "About": "O mně",
+    "Skills": "Dovednosti",
+    "Projects": "Projekty",
+    "Contact": "Kontakt"
+  },
+  "About": {
+    "Subtitle": "O mně",
+    "Title": "Něco Málo O Mně",
+    "DescHigh": "Ahoj, jmenuji se",
+    "Desc": "Jsem Junior React Developer s plynulou angličtinou. Momentálně studuji Objektově Orientované Programování a Programování Webových Aplikací na Technické univerzitě v Ostravě. Jsem k dispozici pro nástup do práce v květnu 2022."
+  },
+  "Skills": {
+    "Subtitle": "Dovednosti",
+    "Title": "V Čem Jsem Dobrý?",
+    "Primary": "Hlavní",
+    "Other": "Vedlejší",
+    "Skills": "Dovednosti",
+    "Basics": "(jen základy)"
+  },
+  "Projects": {
+    "Subtitle": "Projekty",
+    "Title": "Ukázka Mých Dovedností",
+    "Visit": "Otevří Stránku"
+  },
+  "Contact": {
+    "Subtitle": "Kontakt",
+    "Title": "Kontaktní Formulář",
+    "Name": "Jméno",
+    "Email": "E-mail",
+    "Subject": "Předmět",
+    "Message": "Zpráva",
+    "Send": "Odešli zprávu"
+  }
+}

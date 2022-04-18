@@ -4,13 +4,17 @@ import Container from "../../styles/shared/Container";
 import ProjectSlider from "./ProjectSlider";
 import projectsData from "../../data/projectsData";
 
-const Project: React.FC = () => {
+interface Props {
+  locale: any;
+}
+
+const Project: React.FC<Props> = ({ locale: t }) => {
   return (
     <StyledProject id="projects">
       <Container>
-        <h4>Projects</h4>
-        <h2>My Skills Showcase</h2>
-        <ProjectSlider data={projectsData} />
+        <h4>{t.Projects.Subtitle}</h4>
+        <h2>{t.Projects.Title}</h2>
+        <ProjectSlider locale={t} data={projectsData} />
       </Container>
     </StyledProject>
   );

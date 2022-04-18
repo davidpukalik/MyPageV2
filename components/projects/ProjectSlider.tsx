@@ -17,9 +17,10 @@ interface Props {
     date: string;
     link: string;
   }[];
+  locale: any;
 }
 
-const ProjectSlider: React.FC<Props> = ({ data }) => {
+const ProjectSlider: React.FC<Props> = ({ data, locale: t }) => {
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -63,7 +64,7 @@ const ProjectSlider: React.FC<Props> = ({ data }) => {
               <Link href={project.link}>
                 <a>
                   <Button size="small" color="primary">
-                    Visit Page
+                    {t.Projects.Visit}
                   </Button>
                 </a>
               </Link>

@@ -8,13 +8,18 @@ import UKFlag from "../../public/images/flags/united-kingdom-flag.svg";
 import Image from "next/image";
 import Link from "next/link";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useRouter } from "next/router";
+import NavbarTransCS from "../../public/locales/cs/navbarTransCS.json";
+import NavbarTransEN from "../../public/locales/en/navbarTransEN.json";
 
 interface Props {
   isNavBackgroundVisible: boolean;
+  locale: any;
 }
 
-const Navbar: React.FC<Props> = ({ isNavBackgroundVisible }) => {
-  const [Lang, setLang] = useState<"Czech" | "English">("Czech");
+const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
+  const router = useRouter();
+  // const t = locale === "cs" ? NavbarTransCS : NavbarTransEN;
 
   // 768px
   const mobile = useMediaQuery("(max-width:48em)");
@@ -26,33 +31,47 @@ const Navbar: React.FC<Props> = ({ isNavBackgroundVisible }) => {
         <ul>
           <Link href="/">
             <a>
-              <li>Home</li>
+              <li>{t.Navbar.Home}</li>
             </a>
           </Link>
           <Link href="#about">
             <a>
-              <li>About</li>
+              <li>{t.Navbar.About}</li>
             </a>
           </Link>
           <Link href="#skills">
             <a>
-              <li>Skills</li>
+              <li>{t.Navbar.Skills}</li>
             </a>
           </Link>
           <Link href="#projects">
             <a>
-              <li>Projects</li>
+              <li>{t.Navbar.Projects}</li>
             </a>
           </Link>
           <Link href="#contact">
             <a>
-              <li className="outlined">Contact</li>
+              <li className="outlined">{t.Navbar.Contact}</li>
             </a>
           </Link>
         </ul>
         <LanguageSelect>
-          <Image src={CzechFlag} alt="Czech" width={30} height={30} priority />
-          <Image src={UKFlag} alt="English" width={30} height={30} priority />
+          <Image
+            src={CzechFlag}
+            alt="Czech"
+            width={30}
+            height={30}
+            priority
+            onClick={() => router.push(router.asPath, router.asPath, { locale: "cs" })}
+          />
+          <Image
+            src={UKFlag}
+            alt="English"
+            width={30}
+            height={30}
+            priority
+            onClick={() => router.push(router.asPath, router.asPath, { locale: "en" })}
+          />
         </LanguageSelect>
       </Container>
     </StyledNavbar>

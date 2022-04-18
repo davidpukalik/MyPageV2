@@ -1,22 +1,23 @@
 import React from "react";
 import StyledAbout from "../../styles/about/StyledAbout";
 import Container from "../../styles/shared/Container";
+import { Trans } from "react-i18next";
 
-const About: React.FC = () => {
+interface Props {
+  locale: any;
+}
+
+const About: React.FC<Props> = ({ locale: t }) => {
   return (
     <StyledAbout id="about">
       <Container>
-        <h4>About</h4>
-        <h2>About Me</h2>
+        <h4>{t.About.Subtitle}</h4>
+        <h2>{t.About.Title}</h2>
         <div className="desc">
           <p className="special">
-            Hello, I&apos;m <span>David</span>!
+            {t.About.DescHigh} <span>David</span>!{/* Hello, I&apos;m <span>David</span>! */}
           </p>
-          <p>
-            I&apos;m a junior React Developer with fluent English. Currently I&apos;m studying Object Oriented
-            Programming and Web Application Programming at Technical University of Ostrava (CZ). I&apos;m available to
-            start to work in May 2022.
-          </p>
+          <p>{t.About.Desc}</p>
         </div>
       </Container>
     </StyledAbout>
