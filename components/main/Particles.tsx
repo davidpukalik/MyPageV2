@@ -8,7 +8,7 @@ import { loadOpacityUpdater } from "tsparticles-updater-opacity";
 import { loadOutModesUpdater } from "tsparticles-updater-out-modes";
 
 const MainParticles = () => {
-  async function particlesInit(engine) {
+  async function particlesInit(engine: any) {
     await loadColorUpdater(engine);
     await loadCircleShape(engine);
     await loadBaseMover(engine);
