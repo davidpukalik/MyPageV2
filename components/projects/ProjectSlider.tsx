@@ -33,6 +33,12 @@ const ProjectSlider: React.FC<Props> = ({ data }) => {
           slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 880,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
     ],
   };
 
