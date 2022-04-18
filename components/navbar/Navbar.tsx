@@ -9,8 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useRouter } from "next/router";
-import NavbarTransCS from "../../public/locales/cs/navbarTransCS.json";
-import NavbarTransEN from "../../public/locales/en/navbarTransEN.json";
 
 interface Props {
   isNavBackgroundVisible: boolean;
@@ -19,10 +17,10 @@ interface Props {
 
 const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
   const router = useRouter();
-  // const t = locale === "cs" ? NavbarTransCS : NavbarTransEN;
-
   // 768px
   const mobile = useMediaQuery("(max-width:48em)");
+
+  console.log(t);
 
   return (
     <StyledNavbar isNavBackgroundVisible={isNavBackgroundVisible}>
