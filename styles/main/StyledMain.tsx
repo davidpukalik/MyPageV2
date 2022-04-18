@@ -5,6 +5,13 @@ const StyledMain = styled.main`
   min-height: 100vh;
   padding-top: 80px;
   background: ${(props) => props.theme.colors.black};
+  position: relative;
+
+  #tsparticles {
+    canvas {
+      position: absolute !important;
+    }
+  }
 
   .profile-picture {
     margin-bottom: 1.2em;

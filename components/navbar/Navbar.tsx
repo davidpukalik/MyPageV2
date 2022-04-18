@@ -7,16 +7,20 @@ import CzechFlag from "../../public/images/flags/czech-flag.svg";
 import UKFlag from "../../public/images/flags/united-kingdom-flag.svg";
 import Image from "next/image";
 import Link from "next/link";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 interface Props {
-  isNavBackground: boolean;
+  isNavBackgroundVisible: boolean;
 }
 
-const Navbar: React.FC<Props> = (props) => {
+const Navbar: React.FC<Props> = ({ isNavBackgroundVisible }) => {
   const [Lang, setLang] = useState<"Czech" | "English">("Czech");
 
+  // 768px
+  const mobile = useMediaQuery("(max-width:48em)");
+
   return (
-    <StyledNavbar>
+    <StyledNavbar isNavBackgroundVisible={isNavBackgroundVisible}>
       <Container flex justifyContent="space-between">
         <Logo />
         <ul>

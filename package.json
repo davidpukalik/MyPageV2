@@ -18,8 +18,15 @@
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-slick": "^0.28.1",
+    "react-tsparticles": "^2.0.6",
     "sass": "^1.50.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "tsparticles-move-base": "^2.0.6",
+    "tsparticles-shape-circle": "^2.0.6",
+    "tsparticles-updater-color": "^2.0.6",
+    "tsparticles-updater-opacity": "^2.0.6",
+    "tsparticles-updater-out-modes": "^2.0.6",
+    "tsparticles-updater-size": "^2.0.6"
   },
   "devDependencies": {
     "@types/node": "17.0.23",

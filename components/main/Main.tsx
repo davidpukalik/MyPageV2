@@ -6,10 +6,12 @@ import ProfilePicture from "../../public/images/profile_picture.png";
 import SocialMedia from "../shared/SocialMedia";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import Link from "next/link";
+import Particles from "./Particles";
 
 const Main: React.FC = () => {
   return (
     <StyledMain>
+      <Particles />
       <Container flex justifyContent="center" flexDirection="column">
         <Container flex justifyContent="center" flexDirection="column">
           <div className="profile-picture">

@@ -1,14 +1,22 @@
 import styled from "styled-components";
 
-const StyledNavbar = styled.nav`
+interface Props {
+  isNavBackgroundVisible: boolean;
+}
+
+const StyledNavbar = styled.nav<Props>`
   height: 80px;
   width: 100%;
-  background: ${(props) => props.theme.colors.lightGray};
-  background: linear-gradient(
-    ${(props) => props.theme.colors.darkGray} 100%,
-    ${(props) => props.theme.colors.lightGray} 50%
-  );
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  ${(props) =>
+    props.isNavBackgroundVisible &&
+    `
+    background: ${props.theme.colors.darkGray};
+    background: linear-gradient(
+      ${props.theme.colors.darkGray} 100%,
+      ${props.theme.colors.lightGray} 50%
+    );
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  `};
   position: fixed;
   z-index: 99;
 
