@@ -6,7 +6,7 @@ const projectsData = [
     img: firstWebsiteIMG.src,
     title: "Previus davidpukalik.cz",
     desc: "Something long enough. Atleast I think so... Hah. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    date: "December 2021",
+    date: "Novomber 2021",
     link: "/",
   },
   { id: 1, img: firstWebsiteIMG.src, title: "Test2", desc: "this is a test", date: "Novomber 2021", link: "/" },

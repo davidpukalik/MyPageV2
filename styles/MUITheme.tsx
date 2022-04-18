@@ -37,7 +37,7 @@ const MUITheme = createTheme({
             borderBottom: "1px solid #fff",
           },
           "&:hover .MuiInputBase-root::before": {
-            borderBottom: "1px solid #ff922bfb",
+            borderColor: "#ff922b",
           },
         },
       },
