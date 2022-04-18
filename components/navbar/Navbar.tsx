@@ -20,8 +20,6 @@ const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
   // 768px
   const mobile = useMediaQuery("(max-width:48em)");
 
-  console.log(t);
-
   return (
     <StyledNavbar isNavBackgroundVisible={isNavBackgroundVisible}>
       <Container flex justifyContent="space-between">
