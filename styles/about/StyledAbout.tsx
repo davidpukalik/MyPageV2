@@ -7,7 +7,7 @@ const StyledAbout = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #ffffffae;
+  background-color: #ffffffcc;
   background-blend-mode: overlay;
   color: ${(props) => props.theme.colors.darkGray};
   padding: 3em;
@@ -43,6 +43,21 @@ const StyledAbout = styled.div`
 
     p {
       font-size: 1rem;
+    }
+  }
+
+  /* 1024px */
+  @media screen and (max-width: 64em) {
+    .desc {
+      width: 80%;
+    }
+  }
+
+  /* 680px */
+  @media screen and (max-width: 42.5em) {
+    .desc {
+      padding: 0;
+      width: 100%;
     }
   }
 `;

@@ -68,6 +68,7 @@ const ProjectSlider: React.FC<Props> = ({ data, locale: t }) => {
                   </Button>
                 </a>
               </Link>
+              {/* TODO style needs to be edited */}
               <small>{project.date}</small>
             </CardActions>
           </Card>
