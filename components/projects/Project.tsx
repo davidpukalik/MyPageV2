@@ -9,12 +9,14 @@ interface Props {
 }
 
 const Project: React.FC<Props> = ({ locale: t }) => {
+  const lang: keyof typeof projectsData = t.Language;
+
   return (
     <StyledProject id="projects">
       <Container>
         <h4>{t.Projects.Subtitle}</h4>
         <h2>{t.Projects.Title}</h2>
-        <ProjectSlider locale={t} data={projectsData} />
+        <ProjectSlider locale={t} data={projectsData[lang]} />
       </Container>
     </StyledProject>
   );
