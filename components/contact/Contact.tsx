@@ -14,15 +14,20 @@ interface Props {
 }
 
 const Contact: React.FC<Props> = ({ locale: t }) => {
+  const submitHandlerer = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <StyledContact id="contact">
       <Container>
         <h4>{t.Contact.Subtitle}</h4>
         <h2>{t.Contact.Title}</h2>
-        <form>
+        <form onSubmit={submitHandlerer}>
           <Flex justifyContent="space-between" alignItems="center" className="form-control">
             <TextField
               id="input-with-icon-textfield"
+              name="fullname"
               label={t.Contact.Name}
               color="primary"
               sx={{ width: "23%" }}
@@ -37,6 +42,7 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
             />
             <TextField
               id="input-with-icon-textfield"
+              name="email"
               label={t.Contact.Email}
               color="primary"
               sx={{ width: "23%" }}
@@ -51,6 +57,7 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
             />
             <TextField
               id="input-with-icon-textfield"
+              name="subject"
               label={t.Contact.Subject}
               color="primary"
               sx={{ width: "23%" }}
@@ -67,6 +74,7 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
           <Flex className="form-control">
             <TextField
               id="outlined-multiline-static"
+              name="message"
               label={t.Contact.Message}
               multiline
               rows={8}
@@ -74,7 +82,7 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
             />
           </Flex>
           <Flex justifyContent="flex-end">
-            <Button color="primary" variant="outlined">
+            <Button color="primary" variant="outlined" type="submit">
               {t.Contact.Send}
             </Button>
           </Flex>
