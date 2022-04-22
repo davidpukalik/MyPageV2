@@ -13,16 +13,11 @@ const StyledAbout = styled.div`
   padding: 3em;
 
   h4 {
-    font-weight: normal;
-    font-size: 0.8rem;
-    text-transform: uppercase;
     color: ${(props) => props.theme.colors.orange};
     margin-bottom: 0.3em;
   }
 
   h2 {
-    font-weight: bold;
-    font-size: 2.0156rem;
     text-align: left;
     margin-bottom: 1em;
   }
@@ -39,10 +34,6 @@ const StyledAbout = styled.div`
       span {
         color: ${(props) => props.theme.colors.orange};
       }
-    }
-
-    p {
-      font-size: 1rem;
     }
   }
 

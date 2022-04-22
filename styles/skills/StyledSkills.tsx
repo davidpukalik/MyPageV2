@@ -8,16 +8,11 @@ const StyledSkills = styled.div`
   );
 
   h4 {
-    font-weight: normal;
-    font-size: 0.8rem;
     text-align: right;
-    text-transform: uppercase;
     color: ${(props) => props.theme.colors.orange};
   }
 
   h2 {
-    font-weight: bold;
-    font-size: 2.0156rem;
     text-align: right;
     margin-bottom: 1em;
     color: ${(props) => props.theme.colors.white};
@@ -26,7 +21,6 @@ const StyledSkills = styled.div`
   h3 {
     font-family: "Roboto Mono";
     font-weight: 500;
-    font-size: 1.5625rem;
     text-align: left;
     color: #fff;
     margin-bottom: 1em;

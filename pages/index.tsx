@@ -20,6 +20,7 @@ const Home: NextPage = () => {
   const t = locale === "cs" ? TranslationCS : TranslationEN;
 
   useEffect(() => {
+    setIsNavBackgroundVisible(window.scrollY ? true : false);
     const onScroll = () => setIsNavBackgroundVisible(window.scrollY ? true : false);
     // clean up code
     window.removeEventListener("scroll", onScroll);

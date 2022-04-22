@@ -23,8 +23,6 @@ const StyledMain = styled.main`
   }
 
   h1 {
-    font-weight: bold;
-    font-size: 2.4413rem;
     text-transform: uppercase;
     margin-bottom: 0.2em;
     text-align: center;
@@ -37,7 +35,6 @@ const StyledMain = styled.main`
   h3 {
     font-family: "Roboto Mono";
     font-weight: 500;
-    font-size: 1.5625rem;
     color: #fff;
     letter-spacing: -1px;
     margin-bottom: 1em;

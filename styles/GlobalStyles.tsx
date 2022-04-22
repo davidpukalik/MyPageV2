@@ -27,6 +27,26 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
+
+  h1 {
+    font-weight: bold;
+    font-size: 2.4413rem;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 2.0156rem;
+  }
+
+  h3 {
+    font-size: 1.5625rem;
+  }
+
+  h4 {
+    font-weight: normal;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
 `;
 
 export default GlobalStyles;
