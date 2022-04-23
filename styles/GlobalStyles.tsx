@@ -47,6 +47,28 @@ const GlobalStyles = createGlobalStyle`
     font-size: 0.8rem;
     text-transform: uppercase;
   }
+
+  /* 500px */
+  @media screen and (max-width: 31.25em) {
+    h1 {
+      font-size: 2.1413rem;
+    }
+
+    h2 {
+      font-size: 1.7156rem;
+    }
+
+    h3 {
+      font-size: 1.3625rem;
+    }
+
+    h4 {
+      font-size: 0.7rem;
+    }
+
+    p {
+    }
+  }
 `;
 
 export default GlobalStyles;

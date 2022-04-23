@@ -37,6 +37,40 @@ const StyledSkills = styled.div`
     gap: 2em;
     margin-bottom: 3em;
   }
+
+  /* 768px */
+  @media screen and (max-width: 48em) {
+    .skills {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  /* 600px */
+  @media screen and (max-width: 37.4em) {
+    .skills {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* 500px */
+  @media screen and (max-width: 31.25em) {
+    padding: 1em;
+
+    h3 {
+      text-align: center;
+    }
+
+    .skills {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* 380px */
+  @media screen and (max-width: 23.75em) {
+    .skills {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 `;
 
 export default StyledSkills;

@@ -24,7 +24,7 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
         <h4>{t.Contact.Subtitle}</h4>
         <h2>{t.Contact.Title}</h2>
         <form onSubmit={submitHandlerer}>
-          <Flex justifyContent="space-between" alignItems="center" className="form-control">
+          <Flex justifyContent="space-between" alignItems="center" className="form-control form-information">
             <TextField
               id="input-with-icon-textfield"
               name="fullname"

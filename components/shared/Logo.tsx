@@ -2,9 +2,13 @@ import Link from "next/link";
 import React from "react";
 import SyledLogo from "../../styles/shared/StyledLogo";
 
-const Logo = () => {
+interface Props {
+  className?: string;
+}
+
+const Logo: React.FC<Props> = ({ className }) => {
   return (
-    <SyledLogo>
+    <SyledLogo className={className}>
       <Link href="/">
         <a>
           David <span>Pukalík</span>

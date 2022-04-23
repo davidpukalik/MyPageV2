@@ -4,6 +4,7 @@ const StyledProject = styled.div`
   background: ${(props) => props.theme.colors.whiteSpecial};
   color: ${(props) => props.theme.colors.darkGray};
   padding: 3em;
+  overflow: hidden;
 
   h4 {
     text-align: center;

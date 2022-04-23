@@ -58,6 +58,19 @@ const StyledMain = styled.main`
       transform: translate(0, 0);
     }
   }
+
+  /* 700px */
+  @media screen and (max-height: 43.75em) {
+    .profile-picture {
+      margin-bottom: 1.2em;
+
+      img {
+        border-radius: 50%;
+        border: 8px solid rgba(112, 112, 112, 0.3) !important;
+        height: 30vh !important;
+      }
+    }
+  }
 `;
 
 export default StyledMain;

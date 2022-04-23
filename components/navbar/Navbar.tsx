@@ -16,42 +16,77 @@ interface Props {
 }
 
 const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
+  const [isMenuActive, setIsMenuActive] = useState(false);
   const router = useRouter();
-  // 768px
-  const mobile = useMediaQuery("(max-width:48em)");
+  const mobileRes = useMediaQuery("(max-width:48em)"); // 768px
+
+  const closeMenu = () => setIsMenuActive(false);
 
   return (
     <StyledNavbar isNavBackgroundVisible={isNavBackgroundVisible}>
       <Container flex justifyContent="space-between">
-        <Logo />
-        <ul>
+        <Logo className="logo" />
+        {mobileRes && (
+          <div
+            className={`hamburger ${isMenuActive ? "is-active" : ""}`}
+            onClick={() => setIsMenuActive((prev) => !prev)}
+          >
+            <span className="line"></span>
+            <span className="line"></span>
+            <span className="line"></span>
+          </div>
+        )}
+        <ul className={isMenuActive ? "is-active" : ""}>
           <Link href="/">
-            <a>
+            <a onClick={closeMenu}>
               <li>{t.Navbar.Home}</li>
             </a>
           </Link>
           <Link href="#about">
-            <a>
+            <a onClick={closeMenu}>
               <li>{t.Navbar.About}</li>
             </a>
           </Link>
           <Link href="#skills">
-            <a>
+            <a onClick={closeMenu}>
               <li>{t.Navbar.Skills}</li>
             </a>
           </Link>
           <Link href="#projects">
-            <a>
+            <a onClick={closeMenu}>
               <li>{t.Navbar.Projects}</li>
             </a>
           </Link>
           <Link href="#contact">
-            <a>
+            <a onClick={closeMenu}>
               <li className="outlined">{t.Navbar.Contact}</li>
             </a>
           </Link>
+          {mobileRes && (
+            <div className="language-select-mobile">
+              <h3>{t.Navbar.SelectLang}</h3>
+              <ul className="languages">
+                <li
+                  onClick={() => {
+                    router.push(router.asPath, router.asPath, { locale: "cs" });
+                    closeMenu();
+                  }}
+                >
+                  Čeština
+                </li>
+                <li
+                  onClick={() => {
+                    router.push(router.asPath, router.asPath, { locale: "en" });
+                    closeMenu();
+                  }}
+                >
+                  English
+                </li>
+              </ul>
+            </div>
+          )}
         </ul>
-        <LanguageSelect>
+        <LanguageSelect className="language-select">
           <Image
             src={CzechFlag}
             alt="Czech"

@@ -43,10 +43,34 @@ const StyledProjectSlider = styled.div`
     .slick-prev::before,
     .slick-next::before {
       color: ${(props) => props.theme.colors.orange};
+      width: 100%;
+      height: 100%;
     }
 
     .slick-arrow::before {
       font-size: 1.8rem;
+    }
+  }
+
+  /* 480px */
+  @media screen and (max-width: 30em) {
+    .slick-prev {
+      left: -10%;
+    }
+
+    .slick-next {
+      right: -10%;
+    }
+  }
+
+  /* 400px */
+  @media screen and (max-width: 25em) {
+    .slick-prev {
+      left: -15%;
+    }
+
+    .slick-next {
+      right: -15%;
     }
   }
 `;
