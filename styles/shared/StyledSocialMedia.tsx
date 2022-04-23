@@ -5,12 +5,15 @@ const StyledSocialMedia = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  svg {
+  a {
     margin-right: 1em;
-    transition: all 100ms ease-in-out;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    svg {
+      transition: all 100ms ease-in-out;
     }
   }
 `;
