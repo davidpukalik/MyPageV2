@@ -20,6 +20,14 @@ const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
   const router = useRouter();
   const mobileRes = useMediaQuery("(max-width:48em)"); // 768px
 
+  if (mobileRes && isMenuActive) {
+    document.body.style.overflow = "hidden";
+  }
+
+  if (mobileRes && !isMenuActive) {
+    document.body.style.overflow = "auto";
+  }
+
   const closeMenu = () => setIsMenuActive(false);
 
   return (
