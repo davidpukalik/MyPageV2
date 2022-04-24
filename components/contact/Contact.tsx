@@ -48,11 +48,19 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
     setOpen(false);
   };
 
-  // TODO FIXME when you change language captcha disappears
-  reRef.current?.reset();
+  // useEffect(() => {
+  //   console.log(window);
+  // setTimeout(() => {
+  //   window.grecaptcha.render("recaptcha", {
+  //     sitekey: "key",
+  //     callback: function (resp) {},
+  //   });
+  // }, 300);
+  // }, []);
 
   const onSubmitForm: SubmitHandler<IFormInputs> = async (values) => {
     const token = reRef.current?.getValue();
+    reRef.current?.reset();
 
     try {
       const res = await axios.post(
@@ -227,6 +235,7 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
               sitekey={String(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY)}
               size={mobileRes ? "compact" : "normal"}
               ref={reRef}
+              hl={t.Language}
             />
             <Button color="primary" variant="outlined" type="submit" sx={{ marginLeft: "1em" }}>
               {t.Contact.Send}

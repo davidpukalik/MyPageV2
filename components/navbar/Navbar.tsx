@@ -74,6 +74,7 @@ const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
             <div className="language-select-mobile">
               <h3>{t.Navbar.SelectLang}</h3>
               <ul className="languages">
+                {/* TODO provisional fix for google captcha */}
                 <li
                   onClick={() => {
                     router.push(router.asPath, router.asPath, { locale: "cs" });
