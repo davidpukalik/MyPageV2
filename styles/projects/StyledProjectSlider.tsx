@@ -7,17 +7,14 @@ const StyledProjectSlider = styled.div`
   h3 {
     font-weight: bold;
     font-size: 1.25rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.1em;
     text-align: center;
   }
 
-  small {
+  p.date {
     font-size: 0.75rem;
     color: ${(props) => props.theme.colors.lightGray};
-    position: absolute;
-    bottom: 1.3em;
-    right: 1em;
-    text-align: right;
+    text-align: center;
   }
 
   p {
@@ -45,6 +42,16 @@ const StyledProjectSlider = styled.div`
       color: ${(props) => props.theme.colors.orange};
       width: 100%;
       height: 100%;
+    }
+
+    .slick-next,
+    .slick-prev {
+      overflow: hidden;
+    }
+
+    .slick-arrow {
+      width: 2rem;
+      height: 2rem;
     }
 
     .slick-arrow::before {

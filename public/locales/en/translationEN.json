@@ -34,6 +34,12 @@
     "Email": "E-mail",
     "Subject": "Subject",
     "Message": "Message",
-    "Send": "Send message"
+    "Send": "Send message",
+    "MailSuccess": "Mail sent successfully.",
+    "SomethingWentWrong": "Something went wrong! Try again please.",
+    "MailError": "Error! Try again please.",
+    "RequiredField": "This field is required",
+    "MinLength": "You must enter more characters",
+    "ValidEmail": "This is not a valid email"
   }
 }

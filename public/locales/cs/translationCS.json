@@ -34,6 +34,12 @@
     "Email": "E-mail",
     "Subject": "Předmět",
     "Message": "Zpráva",
-    "Send": "Odešli zprávu"
+    "Send": "Odešli zprávu",
+    "MailSuccess": "Mail úspěšně odeslán.",
+    "SomethingWentWrong": "Něco se pokazilo! Zkus to znova.",
+    "MailError": "Chyba! Zkus to znova.",
+    "RequiredField": "Toto pole je povinné",
+    "MinLength": "Musíš zadat více znaků",
+    "ValidEmail": "Tohle není validní email"
   }
 }

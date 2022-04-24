@@ -18,8 +18,11 @@ const MUITheme = createTheme({
           "& label": {
             color: "#fff",
           },
-          "&:hover label": {
+          "&:hover .MuiInputLabel-root": {
             color: "#FF922B",
+          },
+          "&:hover .MuiInputLabel-root.Mui-error": {
+            color: "#d32f2f",
           },
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
@@ -28,6 +31,11 @@ const MUITheme = createTheme({
             },
             "&:hover fieldset": {
               borderColor: "#FF922B",
+            },
+          },
+          "& .MuiOutlinedInput-root.Mui-error": {
+            "&:hover fieldset": {
+              borderColor: "#d32f2f",
             },
           },
           "& .MuiInputBase-root": {

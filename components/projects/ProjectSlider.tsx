@@ -15,6 +15,7 @@ interface Props {
     title: string;
     desc: string;
     date: string;
+    gitLink: string;
     link: string;
   }[];
   locale: any;
@@ -51,10 +52,11 @@ const ProjectSlider: React.FC<Props> = ({ data, locale: t }) => {
             <CardMedia component="img" height="150" image={project.img} alt={project.title} />
             <CardContent>
               <h3>{project.title}</h3>
+              <p className="date">{project.date}</p>
               <p>{project.desc}</p>
             </CardContent>
             <CardActions sx={{ position: "relative" }}>
-              <Link href={project.link}>
+              <Link href={project.gitLink}>
                 <a>
                   <Button variant="outlined" size="small" color="primary">
                     Github
@@ -68,8 +70,6 @@ const ProjectSlider: React.FC<Props> = ({ data, locale: t }) => {
                   </Button>
                 </a>
               </Link>
-              {/* TODO style needs to be edited */}
-              <small>{project.date}</small>
             </CardActions>
           </Card>
         ))}

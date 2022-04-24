@@ -6,6 +6,9 @@ const nextConfig = {
   reactStrictMode: true,
   styledComponents: true,
   i18n,
+  env: {
+    BASE_URL: process.env.BASE_URL,
+  },
 };
 
 module.exports = nextConfig;
