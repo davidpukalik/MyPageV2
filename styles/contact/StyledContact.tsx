@@ -54,6 +54,21 @@ const StyledContact = styled.div`
         margin: 0.7em 0;
       }
     }
+
+    .form-control.form-submit {
+      flex-direction: column;
+      justify-content: center !important;
+
+      .MuiFormControl-root {
+        width: 100%;
+        margin-bottom: 1em;
+      }
+
+      .MuiButtonBase-root {
+        margin: 1em 0;
+        width: 100%;
+      }
+    }
   }
 `;
 

@@ -18,7 +18,7 @@ const projectsData = {
       desc: "Test češiny",
       date: "Novomber 2021",
       gitLink: "https://github.com/davidpukalik/my-page",
-      link: "/",
+      link: "",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const projectsData = {
       desc: "this is a test",
       date: "December 2021",
       gitLink: "https://github.com/davidpukalik/my-page",
-      link: "/",
+      link: "",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const projectsData = {
       desc: "this is a test",
       date: "December 2021",
       gitLink: "https://github.com/davidpukalik/my-page",
-      link: "/",
+      link: "",
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ const projectsData = {
       desc: "this is a test",
       date: "December 2021",
       gitLink: "https://github.com/davidpukalik/my-page",
-      link: "/",
+      link: "",
     },
   ],
   en: [
@@ -65,7 +65,7 @@ const projectsData = {
       desc: "this is a test",
       date: "Novomber 2021",
       gitLink: "https://github.com/davidpukalik/my-page",
-      link: "/",
+      link: "",
     },
     {
       id: 2,
@@ -74,7 +74,7 @@ const projectsData = {
       desc: "this is a test",
       date: "December 2021",
       gitLink: "https://github.com/davidpukalik/my-page",
-      link: "/",
+      link: "",
     },
     {
       id: 3,
@@ -83,7 +83,7 @@ const projectsData = {
       desc: "this is a test",
       date: "December 2021",
       gitLink: "https://github.com/davidpukalik/my-page",
-      link: "/",
+      link: "",
     },
     {
       id: 4,
@@ -92,7 +92,7 @@ const projectsData = {
       desc: "this is a test",
       date: "December 2021",
       gitLink: "https://github.com/davidpukalik/my-page",
-      link: "/",
+      link: "",
     },
   ],
 };

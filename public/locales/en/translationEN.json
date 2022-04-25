@@ -40,6 +40,7 @@
     "MailError": "Error! Try again please.",
     "RequiredField": "This field is required",
     "MinLength": "You must enter more characters",
-    "ValidEmail": "This is not a valid email"
+    "ValidEmail": "This is not a valid email",
+    "Recaptcha": "How much is 2 + 4? (antispam)"
   }
 }

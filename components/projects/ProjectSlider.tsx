@@ -63,13 +63,15 @@ const ProjectSlider: React.FC<Props> = ({ data, locale: t }) => {
                   </Button>
                 </a>
               </Link>
-              <Link href={project.link}>
-                <a>
-                  <Button size="small" color="primary">
-                    {t.Projects.Visit}
-                  </Button>
-                </a>
-              </Link>
+              {project.link && (
+                <Link href={project.link}>
+                  <a>
+                    <Button size="small" color="primary">
+                      {t.Projects.Visit}
+                    </Button>
+                  </a>
+                </Link>
+              )}
             </CardActions>
           </Card>
         ))}

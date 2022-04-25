@@ -8,14 +8,7 @@ type Data = {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  const { fullname, email, subject, message, token } = req.body;
-
-  const human = await robotProtection(token);
-
-  if (!human) {
-    res.status(400).json({ messageStatusRes: "error" });
-    return;
-  }
+  const { fullname, email, subject, message } = req.body;
 
   const transporter = nodemailer.createTransport({
     host: process.env.NEXT_PUBLIC_MAIL_HOST,
@@ -29,7 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   try {
     const emailRes = await transporter.sendMail({
-      from: process.env.NEXT_PUBLIC_MAIL_USER + "nope",
+      from: process.env.NEXT_PUBLIC_MAIL_USER,
       to: process.env.NEXT_PUBLIC_MAIL_USER,
       subject: `Contact form from ${fullname}`,
       html: `<h4>You have new contact form submission</h4>
@@ -43,12 +36,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   } catch (err) {
     res.status(400).json({ messageStatusRes: "error" });
   }
-}
-
-async function robotProtection(token: string) {
-  const res = await axios.post(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY}&response=${token}`
-  );
-
-  return res.data.success;
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import StyledContact from "../../styles/contact/StyledContact";
 import Container from "../../styles/shared/Container";
 import Flex from "../../styles/shared/Flex";
@@ -10,10 +10,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import Button from "@mui/material/Button";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import axios from "axios";
-import ReCAPTCHA from "react-google-recaptcha";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
+import SmartToyIcon from "@mui/icons-material/SmartToy";
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(props, ref) {
   return <MuiAlert elevation={12} ref={ref} variant="filled" {...props} />;
@@ -28,6 +27,7 @@ interface IFormInputs {
   email: string;
   subject: string;
   message: string;
+  recaptcha: string;
 }
 
 const Contact: React.FC<Props> = ({ locale: t }) => {
@@ -37,8 +37,6 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
     text: "default",
   });
   const [open, setOpen] = React.useState<boolean>(false);
-  const reRef = useRef<ReCAPTCHA>(null);
-  const mobileRes = useMediaQuery("(max-width:500px)");
 
   const handleClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
     if (reason === "clickaway") {
@@ -48,42 +46,34 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
     setOpen(false);
   };
 
-  // useEffect(() => {
-  //   console.log(window);
-  // setTimeout(() => {
-  //   window.grecaptcha.render("recaptcha", {
-  //     sitekey: "key",
-  //     callback: function (resp) {},
-  //   });
-  // }, 300);
-  // }, []);
-
   const onSubmitForm: SubmitHandler<IFormInputs> = async (values) => {
-    const token = reRef.current?.getValue();
-    reRef.current?.reset();
+    if (values.recaptcha === "6") {
+      try {
+        const res = await axios.post(
+          `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"}/api/contact`,
+          { ...values },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
-    try {
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"}/api/contact`,
-        { ...values, token },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
+        if (res.status >= 200 && res.status < 300) {
+          setOpen(true);
+          setStatusMessage({ type: res.data.messageStatusRes, text: t.Contact.MailSuccess });
+          reset();
+        } else {
+          setOpen(true);
+          setStatusMessage({ type: "error", text: t.Contact.SomethingWentWrong });
         }
-      );
-
-      if (res.status >= 200 && res.status < 300) {
+      } catch (err: any) {
         setOpen(true);
-        setStatusMessage({ type: res.data.messageStatusRes, text: t.Contact.MailSuccess });
-        reset();
-      } else {
-        setOpen(true);
-        setStatusMessage({ type: "error", text: t.Contact.SomethingWentWrong });
+        setStatusMessage({ type: err.response.data.messageStatusRes, text: t.Contact.MailError });
       }
-    } catch (err: any) {
+    } else {
       setOpen(true);
-      setStatusMessage({ type: err.response.data.messageStatusRes, text: t.Contact.MailError });
+      setStatusMessage({ type: "error", text: "Antispam..." });
     }
     setTimeout(() => setOpen(false), 3000);
   };
@@ -230,12 +220,37 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
               )}
             />
           </Flex>
-          <Flex justifyContent="flex-end" alignItems="flex-start">
-            <ReCAPTCHA
-              sitekey={String(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY)}
-              size={mobileRes ? "compact" : "normal"}
-              ref={reRef}
-              hl={t.Language}
+          <Flex justifyContent="flex-end" alignItems="center" className="form-control form-submit">
+            <Controller
+              name="recaptcha"
+              control={control}
+              defaultValue=""
+              rules={{
+                required: {
+                  value: true,
+                  message: t.Contact.RequiredField,
+                },
+              }}
+              render={({ field, fieldState }) => (
+                <TextField
+                  id="input-with-icon-textfield"
+                  {...field}
+                  name=""
+                  label={t.Contact.Recaptcha}
+                  error={Boolean(fieldState.error)}
+                  helperText={fieldState.error ? fieldState.error.message : ""}
+                  color="primary"
+                  sx={{ width: "23%" }}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <SmartToyIcon color="primary" />
+                      </InputAdornment>
+                    ),
+                  }}
+                  variant="outlined"
+                />
+              )}
             />
             <Button color="primary" variant="outlined" type="submit" sx={{ marginLeft: "1em" }}>
               {t.Contact.Send}

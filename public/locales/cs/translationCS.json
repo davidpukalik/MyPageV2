@@ -40,6 +40,7 @@
     "MailError": "Chyba! Zkus to znova.",
     "RequiredField": "Toto pole je povinné",
     "MinLength": "Musíš zadat více znaků",
-    "ValidEmail": "Tohle není validní email"
+    "ValidEmail": "Tohle není validní email",
+    "Recaptcha": "Kolik je 2 + 4? (antispam)"
   }
 }

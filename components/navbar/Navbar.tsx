@@ -77,7 +77,7 @@ const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
                 {/* TODO provisional fix for google captcha */}
                 <li
                   onClick={() => {
-                    router.push(router.asPath, router.asPath, { locale: "cs" });
+                    router.push("/", "/", { locale: "cs", scroll: false });
                     closeMenu();
                   }}
                 >
@@ -85,7 +85,7 @@ const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
                 </li>
                 <li
                   onClick={() => {
-                    router.push(router.asPath, router.asPath, { locale: "en" });
+                    router.push("/", "/", { locale: "en", scroll: false });
                     closeMenu();
                   }}
                 >
@@ -102,7 +102,7 @@ const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
             width={30}
             height={30}
             priority
-            onClick={() => router.push(router.asPath, router.asPath, { locale: "cs" })}
+            onClick={() => router.push("/", "/", { locale: "cs", scroll: false })}
           />
           <Image
             src={UKFlag}
@@ -110,7 +110,7 @@ const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
             width={30}
             height={30}
             priority
-            onClick={() => router.push(router.asPath, router.asPath, { locale: "en" })}
+            onClick={() => router.push("/", "/", { locale: "en", scroll: false })}
           />
         </LanguageSelect>
       </Container>
