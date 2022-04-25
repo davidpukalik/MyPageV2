@@ -75,7 +75,6 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
       setOpen(true);
       setStatusMessage({ type: "error", text: "Antispam..." });
     }
-    setTimeout(() => setOpen(false), 3000);
   };
 
   return (
@@ -256,7 +255,7 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
               {t.Contact.Send}
             </Button>
           </Flex>
-          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
             <Alert onClose={handleClose} severity={statusMessage.type} sx={{ width: "100%" }}>
               {statusMessage.text}
             </Alert>
