@@ -7,6 +7,7 @@ import SocialMedia from "../shared/SocialMedia";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import Link from "next/link";
 import Particles from "./Particles";
+import TypeWriter from "typewriter-effect";
 
 const Main: React.FC = () => {
   return (
@@ -20,7 +21,13 @@ const Main: React.FC = () => {
           <h1>
             David <span>Pukalík</span>
           </h1>
-          <h3>Junior React Developer</h3>
+          <h3>
+            <TypeWriter
+              onInit={(typewriter) => {
+                typewriter.typeString("Junior React Developer").start();
+              }}
+            ></TypeWriter>
+          </h3>
           <SocialMedia size="large" />
         </Container>
         <Link href="#about">

@@ -30,7 +30,8 @@
     "tsparticles-updater-color": "^2.0.6",
     "tsparticles-updater-opacity": "^2.0.6",
     "tsparticles-updater-out-modes": "^2.0.6",
-    "tsparticles-updater-size": "^2.0.6"
+    "tsparticles-updater-size": "^2.0.6",
+    "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
     "@types/node": "17.0.23",
