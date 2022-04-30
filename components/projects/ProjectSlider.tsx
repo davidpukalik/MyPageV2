@@ -49,7 +49,7 @@ const ProjectSlider: React.FC<Props> = ({ data, locale: t }) => {
     <StyledProjectSlider>
       <Slider {...sliderSettings} className="slider">
         {data.map((project) => (
-          <Card sx={{ maxWidth: 345, minHeight: 310, outline: "primary.main" }} key={project.id}>
+          <Card sx={{ maxWidth: 345, minHeight: 310, outline: "primary.main" }} key={project.id} className="card">
             <CardMedia component="img" height="150" image={project.img} alt={project.title} />
             <CardContent>
               <h3>{project.title}</h3>

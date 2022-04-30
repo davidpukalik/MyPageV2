@@ -70,14 +70,29 @@ const StyledProjectSlider = styled.div`
     }
   }
 
-  /* 400px */
-  @media screen and (max-width: 25em) {
+  /* 470px */
+  @media screen and (max-width: 29.375em) {
+    .card {
+      box-shadow: none;
+    }
+
     .slick-prev {
-      left: -15%;
+      left: -13%;
     }
 
     .slick-next {
-      right: -15%;
+      right: -13%;
+    }
+  }
+
+  /* 400px */
+  @media screen and (max-width: 25em) {
+    .slick-prev {
+      left: -18%;
+    }
+
+    .slick-next {
+      right: -18%;
     }
   }
 `;
