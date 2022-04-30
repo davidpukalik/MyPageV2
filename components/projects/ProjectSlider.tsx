@@ -28,6 +28,7 @@ const ProjectSlider: React.FC<Props> = ({ data, locale: t }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 1240,
@@ -52,7 +53,7 @@ const ProjectSlider: React.FC<Props> = ({ data, locale: t }) => {
             <CardMedia component="img" height="150" image={project.img} alt={project.title} />
             <CardContent>
               <h3>{project.title}</h3>
-              <p className="date">{project.date}</p>
+              {project.date && <p className="date">{project.date}</p>}
               <p>{project.desc}</p>
             </CardContent>
             <CardActions sx={{ position: "relative" }}>
