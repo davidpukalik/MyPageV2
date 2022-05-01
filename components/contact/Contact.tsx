@@ -50,7 +50,7 @@ const Contact: React.FC<Props> = ({ locale: t }) => {
     if (values.recaptcha === "6") {
       try {
         const res = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"}/api/contact`,
+          `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api/contact"}`,
           { ...values },
           {
             headers: {
