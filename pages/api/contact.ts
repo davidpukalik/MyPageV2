@@ -8,6 +8,9 @@ type Data = {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   const { fullname, email, subject, message } = req.body;
+  console.log("req body", req.body);
+  console.log("req", req);
+  console.log("", req);
 
   const transporter = nodemailer.createTransport({
     host: process.env.NEXT_PUBLIC_MAIL_HOST,
