@@ -12,7 +12,7 @@ const projectsData = {
       id: 0,
       img: thisWebsiteScreenshotIMG.src,
       title: "davidpukalik.cz",
-      desc: "Nynější webovka, hlavní použité věci React (NextJS), TypeScript, Styled Components, Node, ...",
+      desc: "Nynější webovka, hlavní použité technologie React (NextJS), TypeScript, Styled Components, Node, ...",
       date: "Duben 2022",
       gitLink: "https://github.com/davidpukalik/MyPageV2",
       link: "/",
