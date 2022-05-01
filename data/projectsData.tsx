@@ -66,7 +66,7 @@ const projectsData = {
       id: 6,
       img: githubIMG.src,
       title: "Více na GitHubu",
-      desc: "Další menší projekty jdou najít na GitHubu. Poté jsem dělal ještě další projekty v Reactu, ale ty jsem dělal na stáži.",
+      desc: "Další menší projekty lze najít na GitHubu. Poté jsem dělal ještě další projekty v Reactu, ale ty jsem dělal na stáži.",
       date: "",
       gitLink: "https://github.com/davidpukalik",
       link: "",
