@@ -29,7 +29,7 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Head>
         <title>David Pukalík | Portfolio</title>
         <meta name="description" content="Page about David Pukalík. :)" />
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
       <Project locale={t} />
       <Contact locale={t} />
       <Footer />
-    </div>
+    </>
   );
 };
 
