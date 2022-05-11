@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import StyledNavbar from "../../styles/navbar/StyledNavbar";
 import Container from "../../styles/shared/Container";
 import LanguageSelect from "../../styles/navbar/LanguageSelect";
@@ -20,13 +20,13 @@ const Navbar: React.FC<Props> = ({ isNavBackgroundVisible, locale: t }) => {
   const router = useRouter();
   const mobileRes = useMediaQuery("(max-width:48em)"); // 768px
 
-  if (mobileRes && isMenuActive) {
-    document.body.style.overflow = "hidden";
-  }
-
-  if (mobileRes && !isMenuActive) {
-    document.body.style.overflow = "auto";
-  }
+  useEffect(() => {
+    if (mobileRes && isMenuActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuActive, mobileRes]);
 
   const closeMenu = () => setIsMenuActive(false);
 
