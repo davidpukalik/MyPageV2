@@ -10,7 +10,7 @@ interface Props {
 const SkillItem: React.FC<Props> = ({ title, img }) => {
   return (
     <StyledSkillItem>
-      <Image src={img} alt="React Logo" width={50} height={50} />
+      <Image src={img} alt={String(title)} width={50} height={50} />
       <p>{title}</p>
     </StyledSkillItem>
   );
