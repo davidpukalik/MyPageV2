@@ -24,7 +24,7 @@ const Main: React.FC = () => {
           <h3>
             <TypeWriter
               onInit={(typewriter) => {
-                typewriter.typeString("Junior React Developer").start();
+                typewriter.typeString("React Developer").start();
               }}
             ></TypeWriter>
           </h3>

@@ -48,34 +48,62 @@ const ProjectSlider: React.FC<Props> = ({ data, locale: t }) => {
   return (
     <StyledProjectSlider>
       <Slider {...sliderSettings} className="slider">
-        {data.map((project) => (
-          <Card sx={{ maxWidth: 345, minHeight: 310, outline: "primary.main" }} key={project.id} className="card">
-            <CardMedia component="img" height="150" image={project.img} alt={project.title} />
-            <CardContent>
-              <h3>{project.title}</h3>
-              {project.date && <p className="date">{project.date}</p>}
-              <p>{project.desc}</p>
-            </CardContent>
-            <CardActions sx={{ position: "relative" }}>
-              <Link href={project.gitLink}>
-                <a>
-                  <Button variant="outlined" size="small" color="primary">
-                    Github
-                  </Button>
-                </a>
-              </Link>
-              {project.link && (
+        {data
+          .sort((a, b) => b.id - a.id)
+          .map((project) => (
+            <Card
+              sx={{ maxWidth: 345, minHeight: 310, outline: "primary.main" }}
+              key={project.id}
+              className="card"
+            >
+              {project.link ? (
                 <Link href={project.link}>
                   <a>
-                    <Button size="small" color="primary">
-                      {t.Projects.Visit}
-                    </Button>
+                    <CardMedia
+                      component="img"
+                      height="150"
+                      image={project.img}
+                      alt={project.title}
+                    />
+                  </a>
+                </Link>
+              ) : (
+                <Link href={project.gitLink}>
+                  <a>
+                    <CardMedia
+                      component="img"
+                      height="150"
+                      image={project.img}
+                      alt={project.title}
+                    />
                   </a>
                 </Link>
               )}
-            </CardActions>
-          </Card>
-        ))}
+              <CardContent>
+                <h3>{project.title}</h3>
+                {project.date && <p className="date">{project.date}</p>}
+                <p>{project.desc}</p>
+              </CardContent>
+              <CardActions sx={{ position: "relative" }}>
+                <Link href={project.gitLink}>
+                  <a>
+                    <Button variant="outlined" size="small" color="primary">
+                      Github
+                    </Button>
+                  </a>
+                </Link>
+                {project.link && (
+                  <Link href={project.link}>
+                    <a>
+                      <Button size="small" color="primary">
+                        {t.Projects.Visit}
+                      </Button>
+                    </a>
+                  </Link>
+                )}
+              </CardActions>
+            </Card>
+          ))}
       </Slider>
     </StyledProjectSlider>
   );
